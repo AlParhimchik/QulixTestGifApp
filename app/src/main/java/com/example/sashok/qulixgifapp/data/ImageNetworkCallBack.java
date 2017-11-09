@@ -5,6 +5,7 @@ package com.example.sashok.qulixgifapp.data;
  */
 
 public interface ImageNetworkCallBack {
-    public void onResponse(byte[] image);
-    public  void onFailure(Exception e);
+    void onResponse(byte[] image);
+
+    void onFailure(Exception e);
 }

@@ -27,7 +27,7 @@ import com.example.sashok.qulixgifapp.mvvm.viewmodel.ViewModel;
 //singleton
 public class AppViewModelFactory implements ViewModelFactory {
 
-    private static volatile ViewModelFactory mViewModelFactory;
+    private static ViewModelFactory mViewModelFactory;
 
     private AppViewModelFactory() {
 

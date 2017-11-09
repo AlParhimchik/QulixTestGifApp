@@ -40,10 +40,6 @@ public class GiphyService {
         gihpyApi = retrofit.create(GihpyApi.class);
     }
 
-    public Retrofit getRetrofit() {
-        return retrofit;
-    }
-
     public Call<SearchResponse> search(String prhase, @Nullable int limit, @Nullable int offset) {
         return gihpyApi.search(Constanse.API_KEY, prhase, limit, offset,"ru");
     }

@@ -53,7 +53,6 @@ public class GifItemViewModel extends ItemViewModel<Gif> {
         viewModel.startLoad();
         if (viewModel.mGif != null)
             if (viewModel.mGif.gifPreview.byteImage != null && viewModel.mGif.gifPreview.byteImage.length != 0) {
-
                 try {
                     GifDrawable gifFromBytes = new GifDrawable(viewModel.mGif.gifPreview.byteImage);
                     view.setImageDrawable(gifFromBytes);

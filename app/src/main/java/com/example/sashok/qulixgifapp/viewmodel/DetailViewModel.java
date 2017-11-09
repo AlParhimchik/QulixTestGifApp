@@ -30,7 +30,6 @@ import pl.droidsonroids.gif.GifImageView;
  */
 
 public class DetailViewModel extends ViewModel {
-    private static final String TAG = "TAG";
     public ObservableBoolean isProgress;
     public ObservableInt progress;
     public Gif mGif;
@@ -67,9 +66,6 @@ public class DetailViewModel extends ViewModel {
                         public void update(long bytesRead, long contentLength, boolean done) {
                             final int progress = (int) ((100 * bytesRead) / contentLength);
                             viewModel.progress.set(progress);
-//                            if (done) {
-//                                viewModel.finishLoad();
-//                            }
 
                         }
                     }, new ImageNetworkCallBack() {
@@ -106,12 +102,9 @@ public class DetailViewModel extends ViewModel {
 
     public void shareGif() {
         try {
-            //create an temp file in app cache folder
             String fileName = String.valueOf(Calendar.getInstance().getTimeInMillis());
             fileGif = new File(mContext.getCacheDir(), fileName + ".gif");
             FileOutputStream outPutStream = new FileOutputStream(fileGif);
-
-            //Saving the resource GIF into the outputFile:
 
             FileOutputStream fos = new FileOutputStream(fileGif);
             fos.write(mGif.gifFull.byteImage);

@@ -30,7 +30,7 @@ public abstract class BaseFragment extends ViewModelFragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        viewModelFactory= AppViewModelFactory.getInstanсe();
+        viewModelFactory = AppViewModelFactory.getInstanсe();
         super.onCreate(savedInstanceState);
     }
 }
