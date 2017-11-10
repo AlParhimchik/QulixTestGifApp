@@ -40,11 +40,11 @@ public class GiphyService {
         gihpyApi = retrofit.create(GihpyApi.class);
     }
 
-    public Call<SearchResponse> search(String prhase, @Nullable int limit, @Nullable int offset) {
+    public Call<SearchResponse> search(String prhase, int limit,  int offset) {
         return gihpyApi.search(Constanse.API_KEY, prhase, limit, offset,"ru");
     }
 
-    public Call<TrendingResponse> getTrending(@Nullable int limit, @Nullable int offset) {
+    public Call<TrendingResponse> getTrending(int limit, int offset) {
         return gihpyApi.trending(Constanse.API_KEY, limit, offset);
     }
 

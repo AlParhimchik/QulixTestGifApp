@@ -18,8 +18,8 @@ import static com.example.sashok.qulixgifapp.data.Constanse.TRENDING;
 
 public interface GihpyApi {
     @GET(SEARCH)
-    Call<SearchResponse> search(@Query("api_key") String api_key, @Query("q") String string, @Query("limit") @Nullable int limit, @Query("offset") @Nullable int offset, @Query("lang") String lang);
+    Call<SearchResponse> search(@Query("api_key") String api_key, @Query("q") String string, @Query("limit") int limit, @Query("offset") int offset, @Query("lang") String lang);
 
     @GET(TRENDING)
-    Call<TrendingResponse> trending(@Query("api_key") String api_key, @Nullable @Query("limit") int limit, @Nullable @Query("offset") int offset);
+    Call<TrendingResponse> trending(@Query("api_key") String api_key, @Query("limit") int limit,  @Query("offset") int offset);
 }

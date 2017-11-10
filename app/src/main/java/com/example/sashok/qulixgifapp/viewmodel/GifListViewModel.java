@@ -109,7 +109,7 @@ public class GifListViewModel extends RecyclerViewViewModel {
         GiphyService.getInstanse().getTrending(GIF_ON_PAGE, GIF_ON_PAGE * state.current_page).enqueue(new Callback<TrendingResponse>() {
             @Override
             public void onResponse(Call<TrendingResponse> call, Response<TrendingResponse> response) {
-                List<Gif> loadedGifs = new ArrayList<Gif>();
+                    List<Gif> loadedGifs = new ArrayList<Gif>();
                 for (TrendingResponse.TrendingData gif_item : response.body().data
                         ) {
                     if (gif_item.gif.gifFull.imageUrl != "" && gif_item.gif.gifPreview.imageUrl != "") {
